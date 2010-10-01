@@ -5,12 +5,21 @@
     <script type="text/javascript" src="js/jquery-1.4.2.min.js"> </script>
     <script type="text/javascript" src="js/todo.js"> </script>
     <style type='text/css'>
+      body{
+        color:#888;
+      }
+      .strike span{
+        text-decoration: line-through;
+      }
       #task-title{
         width:700px;
         font-size:2.0em;
+        float:left;
       }
       #add-task{
         font-size:2.0em;
+        float:right;
+        height:43px;
       }
       #wrapper{
         margin:0 auto;
@@ -19,32 +28,24 @@
       #input-area{
         margin: 0 auto;
       }
+      .clear{
+        clear:both;
+      }
+      #tasks{ list-style:none;padding:0px; font-size: 1.5em;};
     </style>
-    <script type="text/javascript" charset="utf-8">
-      var addTask = function(){
-        var task = $("#task-title").val();
-        $("#tasks").append("<li>"+ task +"</li>")
-      };
-      $(function(){
-        $("#add-task").click(addTask);
-        $("#task-title").keydown(function(event){
-          if(event.keyCode == '13'){
-            addTask();
-          }
-          });
-      });
-  </script>
-<title>xtodo</title>
+    <title>xtodo</title>
   </head>
   <body>
     <div id="wrapper">
       <h1>xtodo</h1>
-      <ul id="tasks">
-      </ul>
+      <hr style='text-decoration:underline;margin-bottom:40px;margin-top:-20px;' />
       <div id='input-area'>
         <input type='text' id='task-title' />
         <input type='button' value='&nbsp;+&nbsp;' id='add-task' />
+        <div class='clear'></div>
       </div>
+      <ul id="tasks">
+      </ul>
     </div>
   </body>
 </html>
