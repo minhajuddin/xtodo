@@ -5,6 +5,5 @@
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
-  "options_page": "options.html",
-  "update_url": "http://github.com/minhajuddin/xtodo/raw/master/updates.xml"
+  "options_page": "options.html"
 }
