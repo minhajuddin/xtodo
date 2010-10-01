@@ -4,15 +4,47 @@
     <link rel="stylesheet" type="text/css" href="css/screen.css" />
     <script type="text/javascript" src="js/jquery-1.4.2.min.js"> </script>
     <script type="text/javascript" src="js/todo.js"> </script>
-    <title>xtodo</title>
+    <style type='text/css'>
+      #task-title{
+        width:700px;
+        font-size:2.0em;
+      }
+      #add-task{
+        font-size:2.0em;
+      }
+      #wrapper{
+        margin:0 auto;
+        width: 775px;
+      }
+      #input-area{
+        margin: 0 auto;
+      }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      var addTask = function(){
+        var task = $("#task-title").val();
+        $("#tasks").append("<li>"+ task +"</li>")
+      };
+      $(function(){
+        $("#add-task").click(addTask);
+        $("#task-title").keydown(function(event){
+          if(event.keyCode == '13'){
+            addTask();
+          }
+          });
+      });
+  </script>
+<title>xtodo</title>
   </head>
   <body>
     <div id="wrapper">
       <h1>xtodo</h1>
       <ul id="tasks">
-        <li>First task</li>
-        <li>Second task</li>
       </ul>
+      <div id='input-area'>
+        <input type='text' id='task-title' />
+        <input type='button' value='&nbsp;+&nbsp;' id='add-task' />
+      </div>
     </div>
   </body>
 </html>
