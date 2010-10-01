@@ -1,0 +1,10 @@
+{
+  "name": "xtodo",
+  "description": "A powerful todo manager",
+  "version": "0.1",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "options_page": "options.html",
+  "update_url": "http://github.com/minhajuddin/xtodo/raw/master/updates.xml"
+}
