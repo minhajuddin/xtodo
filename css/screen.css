@@ -1,0 +1,28 @@
+body{
+  color:#888;
+    }
+.strike span{
+  text-decoration: line-through;
+}
+#task-title{
+  width:700px;
+  font-size:2.0em;
+  float:left;
+}
+#add-task{
+  font-size:2.0em;
+  float:right;
+  height:43px;
+}
+#wrapper{
+  margin:0 auto;
+  width: 775px;
+}
+#input-area{
+  margin: 0 auto;
+}
+.clear{
+  clear:both;
+}
+#tasks{ list-style:none;padding:0px; font-size: 1.5em;};
+
